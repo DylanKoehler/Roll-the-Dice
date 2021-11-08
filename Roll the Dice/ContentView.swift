@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Roll the Dice
 //
-//  Created by Student on 11/8/21.
+//  Created by Dylan Koehler on 11/8/21.
 //
 
 import SwiftUI
@@ -14,8 +14,9 @@ struct ContentView: View {
             Text("Dice Roll")
                 .font(.title)
                 .padding()
-            Text("\(randomValue)")
-                .font(.system(size: 72))
+            Image("pips \(randomValue)")
+                .resizable()
+                .frame(width: 200, height: 200, alignment: .center)
                 .padding()
                 .onTapGesture {
                     randomValue = Int.random(in: 1...6)
